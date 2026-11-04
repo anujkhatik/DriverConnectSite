@@ -1,0 +1,6 @@
+{
+  "name": "DriverConnect",
+  "description": "Time-based driver booking service for your own car in Surat, Gujarat. Professional, verified drivers by the hour or by the day.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

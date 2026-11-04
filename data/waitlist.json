@@ -1,0 +1,14 @@
+[
+  {
+    "id": "DC-7986",
+    "name": "Vikram Mehta",
+    "phone": "9825123456",
+    "email": "vikram@example.com",
+    "platform": "Android (Google Play)",
+    "area": "Vesu",
+    "carType": "Sedan",
+    "createdAt": "2026-11-04T04:31:25.556Z",
+    "status": "PENDING_LAUNCH_NOTIFICATION",
+    "ip": "::1"
+  }
+]
