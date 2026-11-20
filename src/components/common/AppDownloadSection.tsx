@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { Smartphone, CheckCircle2 } from 'lucide-react';
+import { Smartphone, CheckCircle2, Download } from 'lucide-react';
 import { useAppLaunchModal } from '../../context/AppLaunchModalContext.tsx';
 
 export const AppDownloadSection: React.FC = () => {
@@ -49,8 +49,22 @@ export const AppDownloadSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Store Buttons - Click to Open Notify Me Modal */}
-        <div className="pt-4 flex flex-wrap items-center justify-center gap-3">
+        {/* Store & Direct Download Buttons */}
+        <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
+          {/* Direct Android APK Download Button */}
+          <a
+            href="/downloads/driverconnect.apk"
+            download="driverconnect.apk"
+            className="inline-flex items-center gap-3 px-7 py-3.5 bg-[#1FAE6B] text-white rounded-full hover:bg-[#189359] transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1FAE6B] cursor-pointer shadow-md hover:shadow-lg hover:scale-[1.02]"
+            aria-label="Direct Download DriverConnect Android APK"
+          >
+            <Download className="w-5 h-5 text-white" />
+            <div className="text-left">
+              <div className="text-[10px] uppercase tracking-wider text-emerald-100 font-medium leading-none">Direct Download</div>
+              <div className="text-sm font-bold leading-tight">Android APK</div>
+            </div>
+          </a>
+
           {/* Google Play Button */}
           <button
             type="button"
@@ -85,7 +99,7 @@ export const AppDownloadSection: React.FC = () => {
         </div>
 
         <p className="text-xs text-[#6B7280]">
-          * Click to join the priority launch notification list for Surat and receive instant WhatsApp/SMS notification on launch.
+          * Tap <strong>Direct Download</strong> to immediately install the Android APK. Tap Google Play or App Store to join the priority launch list.
         </p>
       </div>
     </section>

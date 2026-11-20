@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X, Car, Shield, ChevronRight } from 'lucide-react';
+import { Menu, X, Car, Shield, ChevronRight, Download } from 'lucide-react';
 import { Button } from './ui/Button.tsx';
 import { BUSINESS_DETAILS } from '../content.ts';
 
@@ -94,7 +94,15 @@ export const Header: React.FC = () => {
           </nav>
 
           {/* Right Action */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden md:flex items-center gap-3">
+            <a
+              href="/downloads/driverconnect.apk"
+              download="driverconnect.apk"
+              className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-2 rounded-lg bg-[#EAF2FF] text-[#2F6FED] hover:bg-[#d8e6fd] transition-colors"
+            >
+              <Download className="w-3.5 h-3.5" />
+              <span>Download APK</span>
+            </a>
             <Button
               variant="primary"
               size="md"
@@ -184,6 +192,15 @@ export const Header: React.FC = () => {
 
             {/* Drawer Bottom CTA */}
             <div className="pt-6 border-t border-[#E4E6EA] space-y-3">
+              <a
+                href="/downloads/driverconnect.apk"
+                download="driverconnect.apk"
+                className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 bg-[#1FAE6B] hover:bg-[#189359] text-white font-semibold rounded-xl text-sm shadow-sm transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <Download className="w-4 h-4 text-white" />
+                <span>Download Android APK</span>
+              </a>
               <Button
                 variant="primary"
                 size="md"

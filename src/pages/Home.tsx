@@ -18,6 +18,7 @@ import {
   CreditCard,
   PhoneCall,
   Smartphone,
+  Download,
 } from 'lucide-react';
 import { SEO } from '../components/common/SEO.tsx';
 import { PhoneMockup } from '../components/common/PhoneMockup.tsx';
@@ -75,7 +76,15 @@ export const Home: React.FC = () => {
               </p>
 
               {/* Action Buttons */}
-              <div className="flex flex-wrap items-center gap-4 pt-2">
+              <div className="flex flex-wrap items-center gap-3 pt-2">
+                <a
+                  href="/downloads/driverconnect.apk"
+                  download="driverconnect.apk"
+                  className="inline-flex items-center gap-2 px-5 py-3 bg-[#1FAE6B] hover:bg-[#189359] text-white text-sm font-semibold rounded-xl transition-all shadow-md hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-[#1FAE6B]"
+                >
+                  <Download className="w-4 h-4 text-white" />
+                  <span>Download Android App</span>
+                </a>
                 <a href="#get-app">
                   <Button variant="primary" size="lg">
                     <span>Book a driver</span>
