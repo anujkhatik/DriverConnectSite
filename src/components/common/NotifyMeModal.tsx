@@ -12,6 +12,7 @@ import {
   AlertCircle,
   ArrowRight,
   Shield,
+  Globe,
 } from 'lucide-react';
 import { Button } from '../ui/Button.tsx';
 import { validateWaitlistForm, WaitlistFormData } from '../../utils/pricing.ts';
@@ -192,6 +193,22 @@ export const NotifyMeModal: React.FC = () => {
           ) : (
             /* Collection Form */
             <form onSubmit={handleSubmit} noValidate className="space-y-4">
+              <div className="p-3.5 rounded-xl bg-[#E8F8F0] border border-[#A7F3D0] text-xs text-[#1F2430] flex items-center justify-between gap-3 shadow-xs">
+                <div className="flex items-center gap-2">
+                  <Globe className="w-4 h-4 text-[#1FAE6B] shrink-0" />
+                  <span><strong>Instant Access:</strong> Use DriverConnect on iPhone &amp; Web now!</span>
+                </div>
+                <a
+                  href="https://app.driverconnect.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-3 py-1.5 bg-[#1FAE6B] hover:bg-[#189359] text-white font-bold rounded-lg text-xs shrink-0 transition-colors inline-flex items-center gap-1"
+                >
+                  <span>Open App</span>
+                  <ArrowRight className="w-3 h-3" />
+                </a>
+              </div>
+
               <div className="p-3 rounded-xl bg-[#EAF2FF]/60 border border-[#BFDBFE] text-xs text-[#1F2430] flex items-start gap-2.5">
                 <BellRing className="w-4 h-4 text-[#2F6FED] shrink-0 mt-0.5" />
                 <span>

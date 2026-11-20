@@ -5,7 +5,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Menu, X, Car, Shield, ChevronRight, Download } from 'lucide-react';
+import { Menu, X, Car, Shield, ChevronRight, Download, Globe } from 'lucide-react';
 import { Button } from './ui/Button.tsx';
 import { BUSINESS_DETAILS } from '../content.ts';
 
@@ -98,18 +98,20 @@ export const Header: React.FC = () => {
             <a
               href="/downloads/driverconnect.apk"
               download="driverconnect.apk"
-              className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-2 rounded-lg bg-[#EAF2FF] text-[#2F6FED] hover:bg-[#d8e6fd] transition-colors"
+              className="inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-2 rounded-lg bg-[#E8F8F0] text-[#1FAE6B] hover:bg-[#d1f2e2] transition-colors"
             >
               <Download className="w-3.5 h-3.5" />
               <span>Download APK</span>
             </a>
-            <Button
-              variant="primary"
-              size="md"
-              onClick={handleBookDriverClick}
+            <a
+              href="https://app.driverconnect.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-xs font-semibold px-3.5 py-2 rounded-lg bg-[#2F6FED] text-white hover:bg-[#2558c4] transition-colors shadow-xs"
             >
-              Book a driver
-            </Button>
+              <Globe className="w-3.5 h-3.5" />
+              <span>Open Web App</span>
+            </a>
           </div>
 
           {/* Mobile Hamburger Button */}
@@ -193,6 +195,16 @@ export const Header: React.FC = () => {
             {/* Drawer Bottom CTA */}
             <div className="pt-6 border-t border-[#E4E6EA] space-y-3">
               <a
+                href="https://app.driverconnect.in"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 bg-[#2F6FED] hover:bg-[#2558c4] text-white font-semibold rounded-xl text-sm shadow-sm transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <Globe className="w-4 h-4 text-white" />
+                <span>Open Web App (iPhone &amp; Web)</span>
+              </a>
+              <a
                 href="/downloads/driverconnect.apk"
                 download="driverconnect.apk"
                 className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 bg-[#1FAE6B] hover:bg-[#189359] text-white font-semibold rounded-xl text-sm shadow-sm transition-colors"
@@ -201,14 +213,6 @@ export const Header: React.FC = () => {
                 <Download className="w-4 h-4 text-white" />
                 <span>Download Android APK</span>
               </a>
-              <Button
-                variant="primary"
-                size="md"
-                fullWidth
-                onClick={handleBookDriverClick}
-              >
-                Book a driver
-              </Button>
               <div className="text-center text-[11px] text-[#6B7280] flex items-center justify-center gap-1">
                 <Shield className="w-3 h-3 text-[#1FAE6B]" />
                 <span>Verified Drivers in Surat</span>
