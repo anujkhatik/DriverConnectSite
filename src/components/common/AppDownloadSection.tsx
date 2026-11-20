@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { Smartphone, CheckCircle2, Download } from 'lucide-react';
+import { Smartphone, CheckCircle2, Download, Globe } from 'lucide-react';
 import { useAppLaunchModal } from '../../context/AppLaunchModalContext.tsx';
 
 export const AppDownloadSection: React.FC = () => {
@@ -51,6 +51,21 @@ export const AppDownloadSection: React.FC = () => {
 
         {/* Store & Direct Download Buttons */}
         <div className="pt-4 flex flex-wrap items-center justify-center gap-4">
+          {/* Web App / iPhone Button */}
+          <a
+            href="https://app.driverconnect.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 px-7 py-3.5 bg-[#2F6FED] text-white rounded-full hover:bg-[#2558c4] transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2F6FED] cursor-pointer shadow-md hover:shadow-lg hover:scale-[1.02]"
+            aria-label="Launch DriverConnect Web App on iPhone and Web"
+          >
+            <Globe className="w-5 h-5 text-white" />
+            <div className="text-left">
+              <div className="text-[10px] uppercase tracking-wider text-blue-100 font-medium leading-none">iPhone &amp; Browser</div>
+              <div className="text-sm font-bold leading-tight">Open Web App</div>
+            </div>
+          </a>
+
           {/* Direct Android APK Download Button */}
           <a
             href="/downloads/driverconnect.apk"
